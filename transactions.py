@@ -32,6 +32,8 @@ def transfer_funds(from_addr, to_addr, amount, fee_rate, rpc, is_witness, atob):
     print("INFO: Broadcasting tx")
     txid = rpc.broadcast_tx(signed["hex"])
 
+    print("INFO: Signed tx hex: ", signed["hex"])
+
     print("INFO: Decoding signed tx")
     decoded_tx = rpc.decoderawtransaction(signed["hex"], is_witness=is_witness)
     print(pretty_format(decoded_tx))
