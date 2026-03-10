@@ -1,0 +1,66 @@
+(.venv) [bofh@hole CS216-NodeSTAR-Bitcoin-Simulator]$ python main.py --type p2sh-segwit --stage BtoC
+==================== P2SH-SegWit Transactions ====================
+INFO: Addresses
+B: 2N4LJeTCEEVPSzCuGdTPCsjoBkn7RTUx4dW
+C: 2NE53PBsc18D1fSgbV7quSTfL9EUDh51mqP
+-------------------- B -> C --------------------
+INFO: listunspent for B
+[{'txid': '248725c4ccc64ec8b708a8bf97b32dd5f2da299c6db57f802cdb29c16cabcdbc', 'vout': 0, 'outpoint': COutPoint(lx('248725c4ccc64ec8b708a8bf97b32dd5f2da299c6db57f802cdb29c16cabcdbc'), 0), 'scriptPubKey': CScript([OP_HASH160, x('799f5a0f673bee2d7c047abd7912f7b746c7f291'), OP_EQUAL]), 'amount_sats': 90000000, 'confirmations': 102, 'address': '2N4LJeTCEEVPSzCuGdTPCsjoBkn7RTUx4dW'}]
+INFO: txid for UTXO of B: 248725c4ccc64ec8b708a8bf97b32dd5f2da299c6db57f802cdb29c16cabcdbc
+INFO: Creating raw_tx (0.8 BTC)
+INFO: Calculated fee: 1660 sat
+INFO: Signing tx
+INFO: Broadcasting tx
+INFO: Signed tx hex:  02000000000101bccdab6cc129db2c807fb56d9c29daf2d52db397bfa808b7c84ec6ccc42587240000000017160014d6999a851cfb17343ad71b0f9fdfb6ec939829f9fdffffff0200b4c4040000000017a914e46da11012da8a29b37e896fceadced27155ffef87049098000000000017a914799f5a0f673bee2d7c047abd7912f7b746c7f2918702473044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3bb26e93dcd02205830cdcd16ca801fb99a617de61cfe04c25b06b3864529e3e02918dc4a8cdbbe01210247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b9600000000
+INFO: Decoding signed tx
+{
+    "txid": "d2992ab7f276e80d31580e06af5c9a7644d85c3999ea196b07ab1b506c61f13c",
+    "hash": "4ddbf37497cb9abecff7666935ce6e8256311ba0dacff03e2e0462d341e2cc0d",
+    "version": 2,
+    "size": 247,
+    "vsize": 166,
+    "weight": 661,
+    "locktime": 0,
+    "vin": [
+        {
+            "txid": "248725c4ccc64ec8b708a8bf97b32dd5f2da299c6db57f802cdb29c16cabcdbc",
+            "vout": 0,
+            "scriptSig": {
+                "asm": "0014d6999a851cfb17343ad71b0f9fdfb6ec939829f9",
+                "hex": "160014d6999a851cfb17343ad71b0f9fdfb6ec939829f9"
+            },
+            "txinwitness": [
+                "3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3bb26e93dcd02205830cdcd16ca801fb99a617de61cfe04c25b06b3864529e3e02918dc4a8cdbbe01",
+                "0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96"
+            ],
+            "sequence": 4294967293
+        }
+    ],
+    "vout": [
+        {
+            "value": "0.80000000",
+            "n": 0,
+            "scriptPubKey": {
+                "asm": "OP_HASH160 e46da11012da8a29b37e896fceadced27155ffef OP_EQUAL",
+                "desc": "addr(2NE53PBsc18D1fSgbV7quSTfL9EUDh51mqP)#6az8ae77",
+                "hex": "a914e46da11012da8a29b37e896fceadced27155ffef87",
+                "address": "2NE53PBsc18D1fSgbV7quSTfL9EUDh51mqP",
+                "type": "scripthash"
+            }
+        },
+        {
+            "value": "0.09998340",
+            "n": 1,
+            "scriptPubKey": {
+                "asm": "OP_HASH160 799f5a0f673bee2d7c047abd7912f7b746c7f291 OP_EQUAL",
+                "desc": "addr(2N4LJeTCEEVPSzCuGdTPCsjoBkn7RTUx4dW)#alkwlv76",
+                "hex": "a914799f5a0f673bee2d7c047abd7912f7b746c7f29187",
+                "address": "2N4LJeTCEEVPSzCuGdTPCsjoBkn7RTUx4dW",
+                "type": "scripthash"
+            }
+        }
+    ]
+}
+INFO: scrictSig:
+0014d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+INFO: txid d2992ab7f276e80d31580e06af5c9a7644d85c3999ea196b07ab1b506c61f13c

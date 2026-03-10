@@ -1,0 +1,14 @@
+[bofh@hole ~]$ cat ~/.bitcoin/bitcoin.conf 
+# Run in regression test mode
+regtest=1
+# Enable server mode for RPC
+server=1
+rest=1
+# RPC authentication ( choose your own )
+rpcuser=rpcuser
+rpcpassword=rpcpassword
+# Wallet settings
+paytxfee=0.0001
+fallbackfee=0.0002
+mintxfee=0.00001
+txconfirmtarget=6

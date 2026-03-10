@@ -1,0 +1,79 @@
+[bofh@hole ~]$ btcdeb --tx=02000000000101bccdab6cc129db2c807fb56d9c29daf2d52db397bfa808b7c84ec6ccc42587240000000017160014d6999a851cfb17343ad71b0f9fdfb6ec939829f9fdffffff0200b4c4040000000017a914e46da11012da8a29b37e896fceadced27155ffef87049098000000000017a914799f5a0f673bee2d7c047abd7912f7b746c7f2918702473044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3bb26e93dcd02205830cdcd16ca801fb99a617de61cfe04c25b06b3864529e3e02918dc4a8cdbbe01210247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b9600000000 --txin=020000000001017661026233a6a1fb9800299af76a755e854c24639ad6f7830170510cd4160dcc0000000017160014ad494991db15779f9c9eb192f380af14ed403054fdffffff02804a5d050000000017a914799f5a0f673bee2d7c047abd7912f7b746c7f29187049098000000000017a914ac6b8fc01ab7c527566ac73d47c857a2fc4dc0638702473044022001ac34cfe7f8f68911625290ede66b0eb2689147c626c8a4b35900a4d47a1ec3022070481b558b2d9eba3414b2984348a0044751bb4f465fb4f2025c7590f257502a01210307491ea7031accfaa29f44f8ca37c2312a911d9f5ac04de0b256ef2507de7b4600000000
+btcdeb 5.0.24 -- type `btcdeb -h` for start up options
+LOG: signing segwit taproot
+notice: btcdeb has gotten quieter; use --verbose if necessary (this message is temporary)
+input tx index = 0; tx input vout = 0; value = 90000000
+got witness stack of size 2
+script sig non-empty; embedded P2SH (extracting payload)
+hash source = 0014d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+22 bytes (P2WPKH)
+valid script
+- generating prevout hash from 1 ins
+[+] COutPoint(248725c4cc, 0)
+note: there is a for-clarity preamble (use --verbose for details)
+5 op script loaded. type `help` for usage information
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+OP_DUP                                   | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+OP_HASH160                               | 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3b...
+d6999a851cfb17343ad71b0f9fdfb6ec939829f9 | 
+OP_EQUALVERIFY                           | 
+OP_CHECKSIG                              | 
+#0000 OP_DUP
+btcdeb> step
+		<> PUSH stack 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+OP_HASH160                               | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+d6999a851cfb17343ad71b0f9fdfb6ec939829f9 | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+OP_EQUALVERIFY                           | 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3b...
+OP_CHECKSIG                              | 
+#0001 OP_HASH160
+btcdeb> step
+		<> POP  stack
+		<> PUSH stack d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+d6999a851cfb17343ad71b0f9fdfb6ec939829f9 |                           d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+OP_EQUALVERIFY                           | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+OP_CHECKSIG                              | 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3b...
+#0002 d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+btcdeb> step
+		<> PUSH stack d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+OP_EQUALVERIFY                           |                           d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+OP_CHECKSIG                              |                           d6999a851cfb17343ad71b0f9fdfb6ec939829f9
+                                         | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+                                         | 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3b...
+#0003 OP_EQUALVERIFY
+btcdeb> step
+		<> POP  stack
+		<> POP  stack
+		<> PUSH stack 01
+		<> POP  stack
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+OP_CHECKSIG                              | 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+                                         | 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3b...
+#0004 OP_CHECKSIG
+btcdeb> step
+EvalChecksig() sigversion=1
+Eval Checksig Pre-Tapscript
+GenericTransactionSignatureChecker::CheckECDSASignature(71 len sig, 33 len pubkey, sigversion=1)
+  sig         = 3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3bb26e93dcd02205830cdcd16ca801fb99a617de61cfe04c25b06b3864529e3e02918dc4a8cdbbe01
+  pub key     = 0247477b185fed00d0ea257c9feae10042fb98a3070dddd2eba6a23a2453d58b96
+  script code = 76a914d6999a851cfb17343ad71b0f9fdfb6ec939829f988ac
+  hash type   = 01 (SIGHASH_ALL)
+SignatureHash(nIn=0, nHashType=01, amount=90000000)
+- sigversion == SIGVERSION_WITNESS_V0
+  sighash     = 44a83677451be8b4324c2327c1fed72c9a254ba2b7d6536b5575eab52f75120e
+  pubkey.VerifyECDSASignature(sig=3044022022d1f1a59617ea94b9c2120d5a02fdddb423b8844cfa5162e9d8e3bb26e93dcd02205830cdcd16ca801fb99a617de61cfe04c25b06b3864529e3e02918dc4a8cdbbe, sighash=44a83677451be8b4324c2327c1fed72c9a254ba2b7d6536b5575eab52f75120e):
+  result: success
+		<> POP  stack
+		<> POP  stack
+		<> PUSH stack 01
+script                                   |                                                             stack 
+-----------------------------------------+-------------------------------------------------------------------
+                                         |                                                                 01
+btcdeb> ^C

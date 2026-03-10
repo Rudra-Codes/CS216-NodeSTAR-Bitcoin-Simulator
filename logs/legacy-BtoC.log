@@ -1,0 +1,62 @@
+(.venv) [bofh@hole CS216-NodeSTAR-Bitcoin-Simulator]$ python main.py --type legacy --stage BtoC
+==================== Legacy Transactions ====================
+INFO: Addresses
+B: n4osoX1fx6NhHdgA6NCwBEwtihKCYfWWN1
+C: mxbA1R61M1846qYg5fuSv3cZLzdsYNY4DF
+-------------------- B -> C --------------------
+INFO: listunspent for B
+[{'txid': '9c8e31f364a21abf26fda3b9549693caee221d3597ae0142a59efb0a94968e28', 'vout': 0, 'outpoint': COutPoint(lx('9c8e31f364a21abf26fda3b9549693caee221d3597ae0142a59efb0a94968e28'), 0), 'scriptPubKey': CScript([OP_DUP, OP_HASH160, x('ff7e36f32aeae58f03bdf8da5362e96e5a7fe546'), OP_EQUALVERIFY, OP_CHECKSIG]), 'amount_sats': 90000000, 'confirmations': 102, 'address': 'n4osoX1fx6NhHdgA6NCwBEwtihKCYfWWN1'}]
+INFO: txid for UTXO of B: 9c8e31f364a21abf26fda3b9549693caee221d3597ae0142a59efb0a94968e28
+INFO: Creating raw_tx (0.8 BTC)
+INFO: Calculated fee: 2250 sat
+INFO: Signing tx
+INFO: Broadcasting tx
+INFO: Signed tx hex:  0200000001288e96940afb9ea54201ae97351d22eeca939654b9a3fd26bf1aa264f3318e9c000000006a47304402205a574a0f1541448e7b8041a9a57189c4fe59c7cac027038d140171d4443fe05302204579b3a5146ff210819510c2efa9590be676f84e2bc891333c9ab5b032e055d0012103e5c1da485ec70183fc512f664bb2e828d1a9c98234bf17acf482f36839573735fdffffff0200b4c404000000001976a914bb45946e45d42908c2258bac57981c52f2823f1388acb68d9800000000001976a914ff7e36f32aeae58f03bdf8da5362e96e5a7fe54688ac00000000
+INFO: Decoding signed tx
+{
+    "txid": "5172caaefc6c2abe936e6d0b3ab247a52ee1c0ccfc27e5d31d287c851aca223d",
+    "hash": "5172caaefc6c2abe936e6d0b3ab247a52ee1c0ccfc27e5d31d287c851aca223d",
+    "version": 2,
+    "size": 225,
+    "vsize": 225,
+    "weight": 900,
+    "locktime": 0,
+    "vin": [
+        {
+            "txid": "9c8e31f364a21abf26fda3b9549693caee221d3597ae0142a59efb0a94968e28",
+            "vout": 0,
+            "scriptSig": {
+                "asm": "304402205a574a0f1541448e7b8041a9a57189c4fe59c7cac027038d140171d4443fe05302204579b3a5146ff210819510c2efa9590be676f84e2bc891333c9ab5b032e055d0[ALL] 03e5c1da485ec70183fc512f664bb2e828d1a9c98234bf17acf482f36839573735",
+                "hex": "47304402205a574a0f1541448e7b8041a9a57189c4fe59c7cac027038d140171d4443fe05302204579b3a5146ff210819510c2efa9590be676f84e2bc891333c9ab5b032e055d0012103e5c1da485ec70183fc512f664bb2e828d1a9c98234bf17acf482f36839573735"
+            },
+            "sequence": 4294967293
+        }
+    ],
+    "vout": [
+        {
+            "value": "0.80000000",
+            "n": 0,
+            "scriptPubKey": {
+                "asm": "OP_DUP OP_HASH160 bb45946e45d42908c2258bac57981c52f2823f13 OP_EQUALVERIFY OP_CHECKSIG",
+                "desc": "addr(mxbA1R61M1846qYg5fuSv3cZLzdsYNY4DF)#m55e0n2c",
+                "hex": "76a914bb45946e45d42908c2258bac57981c52f2823f1388ac",
+                "address": "mxbA1R61M1846qYg5fuSv3cZLzdsYNY4DF",
+                "type": "pubkeyhash"
+            }
+        },
+        {
+            "value": "0.09997750",
+            "n": 1,
+            "scriptPubKey": {
+                "asm": "OP_DUP OP_HASH160 ff7e36f32aeae58f03bdf8da5362e96e5a7fe546 OP_EQUALVERIFY OP_CHECKSIG",
+                "desc": "addr(n4osoX1fx6NhHdgA6NCwBEwtihKCYfWWN1)#tfta6nvl",
+                "hex": "76a914ff7e36f32aeae58f03bdf8da5362e96e5a7fe54688ac",
+                "address": "n4osoX1fx6NhHdgA6NCwBEwtihKCYfWWN1",
+                "type": "pubkeyhash"
+            }
+        }
+    ]
+}
+INFO: scrictSig:
+304402205a574a0f1541448e7b8041a9a57189c4fe59c7cac027038d140171d4443fe05302204579b3a5146ff210819510c2efa9590be676f84e2bc891333c9ab5b032e055d0[ALL] 03e5c1da485ec70183fc512f664bb2e828d1a9c98234bf17acf482f36839573735
+INFO: txid 5172caaefc6c2abe936e6d0b3ab247a52ee1c0ccfc27e5d31d287c851aca223d
